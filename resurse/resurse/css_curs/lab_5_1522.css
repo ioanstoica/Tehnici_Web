@@ -1,0 +1,25 @@
+#galerie_statica{
+    counter-reset: nr_imag;
+}
+
+
+#galerie_statica figcaption::before{
+    counter-increment: nr_imag;
+    content: counter(nr_imag, lower-alpha) ") ";
+}
+
+#galerie_statica figure:hover figcaption{
+    transform: scale(1.45,1.45);
+}
+
+
+#galerie_statica figure:hover img{
+    filter: contrast(200%);
+}
+#galerie_statica figure *{
+    transition: all 1100ms linear;
+}
+
+#galerie_statica figcaption{
+    text-align:center;
+}
