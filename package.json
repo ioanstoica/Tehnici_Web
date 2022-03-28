@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/StoicaIoan02/Tehnici_Web#readme",
   "dependencies": {
+    "curl": "^0.1.4",
     "ejs": "^3.1.6",
     "express": "^4.17.3"
   }
