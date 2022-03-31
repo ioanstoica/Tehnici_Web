@@ -5,7 +5,7 @@ CREATE TYPE categ_pc AS ENUM( 'CPU', 'RAM', 'GPU');
 CREATE TYPE tipuri_piesa AS ENUM('rapida', 'obisnuita', 'lenta');
 
 
-CREATE TABLE IF NOT EXISTS prajituri (
+CREATE TABLE IF NOT EXISTS piese (
    id serial PRIMARY KEY,
    nume VARCHAR(50) UNIQUE NOT NULL,
    descriere TEXT,
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS prajituri (
    data_adaugare TIMESTAMP DEFAULT current_timestamp
 );
 
-INSERT into prajituri (nume,descriere,pret, gramaj, calorii, tip_produs, categorie, ingrediente, pt_diabetici, imagine) VALUES 
+INSERT into piese (nume,descriere,pret, gramaj, calorii, tip_produs, categorie, ingrediente, pt_diabetici, imagine) VALUES 
 ('Savarină', 'Prăjitură insiropată, cu frișcă', 7.5 , 200, 400, 'cofetarie', 'comuna', '{"faina","lapte","frisca","zahar"}', False, 'aproximativ-savarina.jpg'),
 
 ('Amandină', 'Prăjitură cu ciocolată', 6 , 200, 400, 'cofetarie', 'comuna', '{"faina","ciocolata","lapte","zahar","unt"}', False, 'posibil-amandina.jpg'),

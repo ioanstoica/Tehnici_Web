@@ -5,7 +5,7 @@ const {Client}=require("pg");
 const ejs= require("ejs");
 const sass=require("sass");
 
-var client= new Client({database:"bd_1522",user:"lab1522", password:"lab1522", host:"localhost", port:5432});
+var client= new Client({database:"grupa151",user:"grupa151", password:"grupa151", host:"193.226.51.46", port:1521});
 client.connect();
 
 
@@ -22,11 +22,13 @@ console.log("Director proiect:",__dirname);
 
 app.get(["/", "/index", "/home"], function(req, res){
     //res.sendFile(__dirname+"/index1.html");
-    console.log(obImagini);
-    client.query("select * from tabel", function(err, rezQuery){
+    //console.log(obImagini);
+    /*client.query("select * from tabel", function(err, rezQuery){
         console.log(rezQuery);
         res.render("pagini/index", {ip:req.ip, imagini:obImagini.imagini, produse: rezQuery.rows });
-    })
+    })*/
+    res.render("pagini/index", {ip:req.ip, imagini:obImagini.imagini });
+
     
     
 })
