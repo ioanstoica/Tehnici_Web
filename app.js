@@ -18,6 +18,7 @@ app.get("/*", (req, res) => {
         console.log(err);
         res.status(404).render("pagini/404");
       } else {
+        console.log(err);
         res.send("pagini/eroare_generala")
       }
     } else {
