@@ -8,8 +8,12 @@ app.use("/resurse", express.static(__dirname+"/resurse"))
 console.log("Director proiect:",__dirname);
 
 app.get(['/', '/home', '/index'],  (req, res) => {
-  res.render('pagini/index');
+  res.render('pagini/index', {ip: req.ip});
 });
+
+app.get("/*.ejs", (req, res) => {
+  res.status(403).render("pagini/403");
+})
 
 app.get("/*", (req, res) => {
   res.render("pagini"+req.url, (err, rezRender) => {
