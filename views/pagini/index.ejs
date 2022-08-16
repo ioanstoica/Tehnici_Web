@@ -1,42 +1,21 @@
 <!DOCTYPE html>
 <html  lang="ro">
     <head>
-        <meta charset="UTF-8">
+        <%- include('../fragmente/head'); -%>
+        
         <meta name="description" content="Piese de calculator">
         <meta name="keywords" content="calculator, sistem de calcul">
         <title>CompPC</title>
         
         <meta name="author" content="Stoica Ioan">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- ico -->
-        <link rel="apple-touch-icon" sizes="180x180" href="resurse/ico/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="resurse/ico/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="resurse/ico/favicon-16x16.png">
-        <link rel="manifest" href="resurse/ico/site.webmanifest">
-        <link rel="mask-icon" href="resurse/ico/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="shortcut icon" href="resurse/ico/favicon.ico">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-config" content="resurse/ico/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff"> 
 
     </head>
     <body>
-        <header>
-            <p id="Sus"> </p>
-            
-            <nav>
-                <a href="index.html">Acasa</a> 
-                <a href="index.html">Produse</a> 
-                <a href="index.html">Contact</a> 
-            </nav>
-            <h1>
-                Componente PC
-            </h1>
-        </header>
+        <%- include('../fragmente/header'); -%>
+
         <main>
             <h2>
-                Aceasta este pagina principala a magazinului de componente de calculator. 
+                Aceasta este pagina principala a magazinului de componente de calculator2. 
             </h2>
             <section>
                 <h2>Cateva informatii despre calculatoare: </h2>
@@ -54,7 +33,7 @@
                 Calculatoarele clasice pe care le folosim în prezent efectuează operații logice folosind biți - un flux de impulsuri electrice sau optice reprezentând formule binare formate din 1 sau 0. Un calculator obișnuit stochează și procesează informația cu ajutorul tranzistorilor: când tranzistorul permite trecerea curentului electric, apare un semnal de tip 0, iar, dacă tranzistorul nu permite trecerea curentului electric, un semnal de tip 1. În orice sarcină a computerului, procesul este același: un algoritm manipulează o serie de biți, unde fiecare bit este fie 0, fie 1 (input), din care rezultatul este un nou șir de biți (output).
             </p>
             <figure>
-                <img src="resurse/imagini/circuit.jpg" alt="Circuit" style="width:20%">
+                <img src="/resurse/imagini/circuit.JPG" alt="Circuit" style="width:20%">
                 <figcaption>Un circuit integrat văzut la microscop</figcaption>
             </figure>
             <h3>Istoric</h3>
@@ -66,7 +45,7 @@ Odată cu revigorarea matematicii și a științelor în timpul Renașterii euro
 În prima jumătate a secolului al XX-lea, nevoile de calcul ale comunității științifice erau satisfăcute de calculatoare analoage, foarte specializate și din ce în ce mai sofisticate. Perfecționarea electronicii digitale (datorată lui Claude Shannon în anii 1930) a condus la abandonarea calculatoarelor analogice în favoarea celor digitale (numerice), care modelează problemele în numere (biți) în loc de semnale electrice sau mecanice. Este greu de precizat care a fost primul calculator digital; realizări notabile au fost: calculatorul Atanasoff-Berry, mașinile Z ale germanului Konrad Zuse - de exemplu calculatorul electromecanic Z3, care, deși foarte nepractic, a fost probabil cel dintâi calculator universal, apoi calculatorul ENIAC cu o arhitectură relativ inflexibilă care cerea modificări ale cablajelor la fiecare reprogramare, precum și calculatorul secret britanic Colossus, construit pe bază de lămpi și programabil electronic.
             </p>
             <figure>
-                <img src="resurse/imagini/monitor.jpeg" alt="Monitor" style="width:20%">
+                <img src="/resurse/imagini/monitor.jpeg" alt="Monitor" style="width:20%">
                 <figcaption>Monitorul limbajului mașinii într-un computer cu o singură placă W65C816S.</figcaption>
             </figure>
             <p>
@@ -75,7 +54,7 @@ Echipa de proiectare a ENIAC-ului, recunoscând neajunsurile acestuia, a elabora
 În anii 1960 lămpile (tuburile electronice) au fost înlocuite de tranzistori, mult mai eficienți, mai mici, mai ieftini și mai fiabili, ceea ce a dus la miniaturizarea și ieftinirea calculatoarelor. Din anii 1970, adoptarea circuitelor integrate a coborât și mai mult prețul și dimensiunea calculatoarelor, permițând printre altele și apariția calculatoarelor personale de acum.
             </p>
             <figure>
-                <img src="resurse/imagini/calculator.jpg" alt="Calculator" style="width:20%">
+                <img src="/resurse/imagini/calculator.jpg" alt="Calculator" style="width:20%">
                 <figcaption>Un calculator</figcaption>
             </figure>
 
@@ -108,18 +87,10 @@ Echipa de proiectare a ENIAC-ului, recunoscând neajunsurile acestuia, a elabora
                     5. A cincea generatie de claculatoare este reprezentata de sistemele construite din 1990 pana astazi. Acestea accentueaza performantele generatiei anterioare prin utilizarea microcipurilor (circuite integrate pe o scara ultra larga), prin cresterea vitezei de operare si a capacitatii de stocare (ajunge in prezent la ordinul Giga octetilor). </p>
             </details>
             
-
+            <p> Date utilizator site-IP: <b> <%- locals.ip %> </b> </p>
         </main>
-        <footer>
-            <a href="#Sus">Sus</a>
-            <p>Detalii de contact:</p>
-            <address>
-                <a href="https://web.whatsapp.com/">0773222111</a>
-                <a href = "https://www.google.com/maps/place/Facultatea+de+Matematic%C4%83+%C8%99i+Informatic%C4%83/@44.4355355,26.097398,17z/data=!3m1!4b1!4m5!3m4!1s0x40b1ff472f47f047:0x493984726f0235f9!8m2!3d44.4355355!4d26.0995867">Strada Academiei 14, București 010014 </a>S
-            </address>
-            
-            
-            <small>&#169;CompPC <time datetime="2022-02-20">20 februarie 2022</time></small>
-        </footer>
+        
+        <%- include('../fragmente/footer'); -%>
+
     </body>
 </html>
