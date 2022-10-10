@@ -1,3 +1,31 @@
 header{
     background-color: lightgrey;
 }
+
+#grid-pagina{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "z-welcome z-welcome z-welcome"
+                        "z-info z-info z-info"
+                        "z-intrebari z-intrebari z-ip";
+}
+
+#grid-pagina > section {
+    border: 1px solid black;
+}
+
+#welcome{
+    grid-area:z-welcome;
+}
+
+#info{
+    grid-area:z-info;
+}
+
+#intrebari{
+    grid-area:z-intrebari;
+}
+
+#ip{
+    grid-area:z-ip;
+}
