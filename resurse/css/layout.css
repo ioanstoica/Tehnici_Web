@@ -1,5 +1,14 @@
+body{
+    --padding-main: 20px;
+}
+
 header{
     background-color: lightgrey;
+}
+
+#main{
+    background-color: lightblue;
+    padding: var(--padding-main); 
 }
 
 #grid-pagina{
