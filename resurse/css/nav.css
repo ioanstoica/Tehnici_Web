@@ -81,6 +81,10 @@ ul.meniu a, ul.meniu div{
    }
 }
 
+#hamburger, #ch-menu{
+    display: none;
+}
+
 nav{
     height: var(--inaltime-meniu);
     background-color: var(--culoare-meniu);
