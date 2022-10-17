@@ -2,6 +2,7 @@ body {
     --inaltime-meniu: 25px;
     --latime-buton: 100px;
     --culoare-meniu: blue;
+    --culoare-meniu-selectat: red;
     --latime-bord-meniu: 1px;
 }
 
@@ -38,17 +39,23 @@ ul.meniu ul{
 
 ul.meniu ul li{
     height: var(--inaltime-meniu);
-    background-color: var(--culoare-meniu);
-    border: var(--latime-buton);
+    border: var(--latime-bord-meniu) solid black;
     width: var(--latime-buton);
     
+}
+
+ul.meniu li a:hover, ul.meniu li div:hover{
+    background-color: var(--culoare-meniu-selectat);
 }
 
 ul.meniu>li:hover {
     overflow: visible;
 }
 
-ul.meniu a{
+ul.meniu a, ul.meniu div{
     color: black;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--culoare-meniu);
     text-decoration: none;
 }
