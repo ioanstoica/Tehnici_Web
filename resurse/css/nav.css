@@ -1,11 +1,20 @@
 body {
     --inaltime-meniu: 25px;
     --latime-buton: 100px;
+    --culoare-meniu: blue;
+    --latime-bord-meniu: 1px;
 }
 
 ul.meniu {
     display: flex;
+    padding: 0;
+    margin: 0;
     list-style-type: none;
+}
+
+ul.meniu li a {
+    display: block;
+    height: 100%;
 }
 
 ul.meniu>li {
@@ -13,9 +22,26 @@ ul.meniu>li {
     overflow: hidden;
     line-height: var(--inaltime-meniu);
     vertical-align: middle;
-    border: 1px solid black;
+    border:var(--latime-bord-meniu) solid black;
     width: var(--latime-buton);
     text-align: center;
+}
+
+ul.meniu ul{
+    list-style-type: none;
+    z-index: 10px;
+    position: relative;
+    left: -1px;
+    padding: 0;
+    margin: 0;
+}
+
+ul.meniu ul li{
+    height: var(--inaltime-meniu);
+    background-color: var(--culoare-meniu);
+    border: var(--latime-buton);
+    width: var(--latime-buton);
+    
 }
 
 ul.meniu>li:hover {
