@@ -38,3 +38,9 @@ header{
 #ip{
     grid-area:z-ip;
 }
+
+@media screen and (max-width: 700px){
+    #grid-pagina{
+        display: block;
+    }
+}
