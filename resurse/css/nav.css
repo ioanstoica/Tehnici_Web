@@ -35,6 +35,16 @@ ul.meniu ul{
     left: -1px;
     padding: 0;
     margin: 0;
+    transform: scale(0.5, 0);
+    transform-origin: 50% 0;
+}
+
+ul.meniu>li:hover ul{
+    animation-name: animatie_submeniu;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 ul.meniu ul li{
@@ -56,6 +66,22 @@ ul.meniu a, ul.meniu div{
     color: black;
     cursor: pointer;
     font-weight: bold;
+    transition: 1s linear;
     background-color: var(--culoare-meniu);
     text-decoration: none;
+}
+
+@keyframes animatie_submeniu {
+   50% {
+      transform: scale(0.5, 1);
+   } 
+   100% {
+      transform: scale(1, 1);
+      opacity: 1;
+   }
+}
+
+nav{
+    height: var(--inaltime-meniu);
+    background-color: var(--culoare-meniu);
 }
