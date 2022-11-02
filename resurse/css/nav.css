@@ -88,4 +88,9 @@ ul.meniu a, ul.meniu div{
 nav{
     height: var(--inaltime-meniu);
     background-color: var(--culoare-meniu);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
 }
