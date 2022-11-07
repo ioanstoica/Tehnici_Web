@@ -1,10 +1,27 @@
 Task-uri proiect: https://docs.google.com/document/d/1tPJip4tnAbj84q2Nq2qtsnZtSeHd94rK2Isu-6SFyX8/edit
 Etapa 1: DONE
 
-Etapa 2: ...
+Etapa 2:
+Etapa 2 (punctaj recomandat 0.55)
+Atentie - unele cerinte au enunt diferit pentru fiecare student (si sunt marcate printr-un link). Trebuie sa va inregistrati pe site pentru a le vedea.
+Daca stilizarea dintr-o cerinta nu va place, puteti sa imi cereti o alta varianta (imi scrieti pe chat). Culorile din imaginile si videoclipurile date ca exemplu nu trebuie
+respectate (folositi culorile din schema cromatică aleasă de voi).
+(0.025) Task schema cromatica: (cerință individuală)
+(0.15) Task layout:    (cerință individuală)
+(0.2) Task meniu:  (cerință individuală)
+(0.025) Task iconuri și font extern. Folosiți in prima pagină a site-ului un font extern: Google API. Folosiți în pagină, într-un loc relevant un icon static și unul animat (separat de eventuale alte taskuri care cer așa ceva) din colecția Font Awesome
+(0.05) Task tabel: (cerință individuală)
+(0.05) Task taburi iframe:  (cerință individuală)
+(0.05) Link top:  (cerință individuală)
+Bonusuri:
+(0.05) Resetarea css-ului cu redefinirea spațierilor, dimensiunilor, culorilor, stilurilor bol si italic, eventual a bulleturilor și indicilor de listă, a stilului tabelelor). In afară de body și html care vor primi dimensiuni în unități fixe, toate celelalte elemente vor folosi unități relative. Se vor folosi variabile pentru valori care se repetă și depind logic unele de altele.
+(0.05)Stilizarea unei formule scrise în MathML.(dar părți diferite din formulă să aibă stil diferit.
+(0.05) Icon-ul meniului "hamburger" să fie creat cu 3 divuri (eventual puse într-un div container în locul unei imagini).
+(0.05) Cand se trece pe ecran mic și apare iconul pentru meniu, apariția să fie făcută printr-o animație asupra divurilor care să implice schimbarea tuturor următoarelor proprietăți: culoarea celor 3 bare, o transformare geometrică, opacitate. Puteți schimba și alte proprietăți dacă doriți. Animația trebuie să aibă minim 3 cadre cheie.
+(0.05) Pentru bonusul anterior, fiecare bară din hamburger-menu să aibă asociată o animație, însă animațiile să înceapă succesiv cu o diferența de t milisecunde (de exemplu t=300). Delayurile diferite în cadrul animației se vor genera cu o instrucțiune for scrisă în sass.
+
 
 Etapa 3: 
-
 Etapa 3 (punctaj recomandat 0.7)
 (0.25)Trecerea site-ului pe node și crearea de fișiere EJS conform  cerințelor:
 DONE 1. Se va crea un obiect server express care va asculta pe portul 8080. (sau alt port daca aveti deja folosit 8080) 
