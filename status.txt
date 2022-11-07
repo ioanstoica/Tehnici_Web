@@ -21,3 +21,4 @@ DONE 10. La cererea oricărui fișier cu extensia ejs se va transmite o eroare d
 (0.15)  Stil printare  (cerință individuală)
 (0.25)  Efecte css (se vor alege efecte css de implementat a sa insumeze 0.25) - nu s-a postat inca cerinta (se va posta pana la finalul zilei)
 
+To be continued...\
