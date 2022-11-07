@@ -1,9 +1,35 @@
 const express = require('express')
+const fs= require('fs')
 const app = express()
 const port = 8080
 
 app.set('view engine', 'ejs');
 app.use("/resurse", express.static(__dirname+"/resurse"))
+
+obGlobal={
+  erori:null
+}
+
+function createErrors() {
+  var continutFisier = fs.readFileSync(__dirname+"/resurse/json/erori.json").toString("utf-8")
+  obGlobal.erori = JSON.parse(continutFisier)
+}
+createErrors()
+
+function renderError(res, identificator, titlu, text, imagine){
+  var eroare = obGlobal.erori.info_erori.find(function(elem){
+    return elem.identificator == identificator;
+  })
+  titlu = titlu || (eroare && eroare.titlu) || obGlobal.erori.eroare_default.titlu
+  text = text || (eroare && eroare.text) || obGlobal.erori.eroare_default.text
+  imagine = imagine || (eroare && eroare.imagine) || obGlobal.erori.eroare_default.imagine
+  if(eroare && eroare.status){
+    res.status(identificator).render("pagini/eroare", {titlu: titlu, text: text, imagine: imagine})
+  } else {
+    res.render("pagini/eroare", {titlu: titlu, text: text, imagine: imagine})
+  }
+
+}
 
 console.log("Director proiect:",__dirname);
 
@@ -20,7 +46,8 @@ app.get("/*", (req, res) => {
     if (err) {
       if(err.message.includes("Failed to lookup view")){
         console.log(err);
-        res.status(404).render("pagini/404");
+        // res.status(404).render("pagini/404");
+        renderError(res,404);
       } else {
         console.log(err);
         res.send("pagini/eroare_generala")
