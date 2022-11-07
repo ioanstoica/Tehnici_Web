@@ -18,18 +18,19 @@ createErrors()
 
 function renderError(res, identificator, titlu, text, imagine){
   var eroare = obGlobal.erori.info_erori.find(function(elem){
-    return elem.identificator == identificator;
+      return elem.identificator==identificator;
   })
-  titlu = titlu || (eroare && eroare.titlu) || obGlobal.erori.eroare_default.titlu
-  text = text || (eroare && eroare.text) || obGlobal.erori.eroare_default.text
-  imagine = imagine || (eroare && eroare.imagine) || obGlobal.erori.eroare_default.imagine
+  titlu= titlu || (eroare && eroare.titlu) || obGlobal.erori.eroare_default.titlu;
+  text= text || (eroare && eroare.text) || obGlobal.erori.eroare_default.text;
+  imagine= imagine || (eroare && obGlobal.erori.cale_baza+"/"+eroare.imagine) || obGlobal.erori.cale_baza+"/"+obGlobal.erori.eroare_default.imagine;
   if(eroare && eroare.status){
-    res.status(identificator).render("pagini/eroare", {titlu: titlu, text: text, imagine: imagine})
-  } else {
-    res.render("pagini/eroare", {titlu: titlu, text: text, imagine: imagine})
+      res.status(identificator).render("pagini/eroare", {titlu:titlu, text:text, imagine:imagine})
   }
-
+  else{
+      res.render("pagini/eroare", {titlu:titlu, text:text, imagine:imagine});
+  }
 }
+
 
 console.log("Director proiect:",__dirname);
 
@@ -38,7 +39,7 @@ app.get(['/', '/home', '/index'],  (req, res) => {
 });
 
 app.get("/*.ejs", (req, res) => {
-  res.status(403).render("pagini/403");
+  renderError(res, 403);  // 403 Forbidden
 })
 
 app.get("/*", (req, res) => {
@@ -47,7 +48,7 @@ app.get("/*", (req, res) => {
       if(err.message.includes("Failed to lookup view")){
         console.log(err);
         // res.status(404).render("pagini/404");
-        renderError(res,404);
+        renderError(res,404,"Pagina nu a fost gasita","Pagina pe care o cautati nu exista","/resurse/img/404.png");
       } else {
         console.log(err);
         res.send("pagini/eroare_generala")
