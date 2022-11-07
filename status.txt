@@ -1,0 +1,18 @@
+Etapa 3: 
+
+Etapa 3 (punctaj recomandat 0.7)
+(0.25)Trecerea site-ului pe node și crearea de fișiere EJS conform  cerințelor:
+DONE 1. Se va crea un obiect server express care va asculta pe portul 8080. (sau alt port daca aveti deja folosit 8080) 
+DONE 2. Se va folosi EJS pentru generarea (randarea) paginilor. Se va face un folder numit views în rădăcina proiectului. În el veți face un folder numit pagini (care conține paginile întregi) și altul numit fragmente (care conține părți de pagini (bucățele de cod html) ce pot fi refolosite pe mai multe pagini).
+DONE 3. Din index (care va fi redenumit index.ejs) se vor decupa headerul și footerul și se vor pune în ejs-uri separate. De asemenea se va decupa partea de head care conține codul care nu se schimbă în funcție de pagină (de exemplu, tagul meta cu encodingul sau autorul, includerea faviconului, fișierelor css generale (nu specifice paginii) a scripturilor generale etc). Se va folosi funcția include() pentru a include toate aceste fragmente în pagini
+DONE 4. Se va realiza (dacă nu l-ați făcut deja) un folder special cu toate resursele site-ului (în stilul exemplului de la curs în care am pus toate fișierele statice, precum imagini, fișiere de stil, videoclipuri etc în folderul "resurse"). Numele folderului îl decideți voi, însă va trebui să fie structurat, de asemenea, în subfoldere în funcție de tipul și modul de utilizarea al fișierelor. Se va defini în program acest folder ca fiind static
+DONE 5. Se vor schimba căile fișierelor-resursă folosite în pagini, astfel încât să nu mai fie relative ci stil cerere către server (de exemplu, /resurse/stiluri/ceva.css în loc de, de exemplu, ../resurse/stiluri/ceva.css)
+DONE 6. Prima pagină (index) trebuie să se poată accesa atât cu localhost:8080 cât și cu localhost:8080/index,  localhost:8080/home.
+7. Veți declara un app.get() general care tratează orice cerere de forma /pagina randând fișierul pagina.ejs. Dacă acesta nu există, se va randa o pagină specială de eroare 404. Se va crea o pagină specială pentru eroarea 404. Pagina va avea atât ca titlu cât și heading textul "Eroare 404". Pagina pentru 404 trebuie să conțină headerul (cu tot cu meniu) și footerul. Pagina va avea un text care să se potrivească cu tema site-ului și o imagine care să simbolizeze căutarea fără succes.Se va seta codul de eroare 404 al răspunsului folosind funcția status(). Paginile de erori trebuie sa fie create cu ajutorul unui template (eroare.ejs) iar datele erorilor să fie încărcate dintr-un JSON
+8. Veți mai face încă o pagină (cu puțin text sau imagini, ca să aibă conținut), de exemplu o pagină cu descrierea site-ului sau istoricul său, al firmei virtuale pentru care este făcut etc. Această pagină trebuie să poată fi accesată prin meniu (linkul să fie corect și să transmită o cerere de tip get). Nu faceti încă pagina de produse, findcă pe acelea le preluăm din baza de date. Nici paginile de înregistrare sau login, fiindca le tratăm separat.
+9. În zona din layout de date despre utilizator vom afișa ip-ul utilizatorului (prin program). Deocamdată, site-ul fiind local, veți vedea mereu ip-ul de localhost (adică ::1). Ip-ul real se va vedea când adăugați site-ul pe Heroku.
+10. La cererea oricărui fișier cu extensia ejs se va transmite o eroare de tip 403 Forbidden. Pagina de 403 va avea format similar cu cea de 404, folosind același template (eroare.ejs), dar textul și imaginea schimbate corespunzător, preluate din JSON
+(0.05) Task video (cerință individuală)
+(0.15)  Stil printare  (cerință individuală)
+(0.25)  Efecte css (se vor alege efecte css de implementat a sa insumeze 0.25) - nu s-a postat inca cerinta (se va posta pana la finalul zilei)
+
