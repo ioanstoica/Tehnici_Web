@@ -1,0 +1,10 @@
+Schema cromatica aleasa: 
+ - #474F59
+ - #9FB0BF
+ - #707322
+ - #A67C58
+ - #0D0D0D
+
+Am ales aceasta schema cromatica deoarece este in trend si se potriveste cu arhitectura si design-ul site-ului.
+Plus ca acest set de culori denota seriozitate, specifica unui magazin online.
+
