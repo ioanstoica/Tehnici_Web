@@ -24,3 +24,15 @@ a {
     /* set color black */
     color: #000;
 }
+
+.div_baner {
+    width: 100%;
+}
+
+/* Etapa 3.12.1 */
+.banner {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    border: #000 1px dotted;
+}
