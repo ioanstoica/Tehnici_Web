@@ -13,6 +13,14 @@ iframe,
 img,
 video,
 .taburi-iframe,
-figure {
+figure,
+.sus {
     display: none;
+}
+
+/* Etapa 3.12.4 */
+a {
+    text-decoration: none;
+    /* set color black */
+    color: #000;
 }
