@@ -1,0 +1,18 @@
+/* print.css */
+
+/* Etapa 3.12.2 */
+header,
+footer,
+aside,
+nav,
+form,
+iframe,
+.menu,
+.hero,
+.adslot,
+img,
+video,
+.taburi-iframe,
+figure {
+    display: none;
+}
