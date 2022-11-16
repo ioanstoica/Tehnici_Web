@@ -49,3 +49,7 @@ header {
         display: block;
     }
 }
+
+.banner {
+    display: none;
+}
