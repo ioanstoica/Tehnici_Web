@@ -1,46 +1,51 @@
-body{
+body {
     --padding-main: 20px;
+    --background-color: #9FB0BF;
+    --text-color: #0D0D0D;
+    --border-color: #474F59;
+    --highlight-color: #A67C58;
+    --ads-color: #707322;
 }
 
-header{
+header {
     background-color: lightgrey;
 }
 
-#main{
+#main {
     background-color: lightblue;
-    padding: var(--padding-main); 
+    padding: var(--padding-main);
 }
 
-#grid-pagina{
+#grid-pagina {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "z-welcome z-welcome z-welcome"
-                        "z-info z-info z-info"
-                        "z-intrebari z-intrebari z-ip";
+        "z-info z-info z-info"
+        "z-intrebari z-intrebari z-ip";
 }
 
-#grid-pagina > section {
+#grid-pagina>section {
     border: 1px solid black;
 }
 
-#welcome{
-    grid-area:z-welcome;
+#welcome {
+    grid-area: z-welcome;
 }
 
-#info{
-    grid-area:z-info;
+#info {
+    grid-area: z-info;
 }
 
-#intrebari{
-    grid-area:z-intrebari;
+#intrebari {
+    grid-area: z-intrebari;
 }
 
-#ip{
-    grid-area:z-ip;
+#ip {
+    grid-area: z-ip;
 }
 
-@media screen and (max-width: 700px){
-    #grid-pagina{
+@media screen and (max-width: 700px) {
+    #grid-pagina {
         display: block;
     }
 }
