@@ -6,4 +6,4 @@
 
 4. Pentru a rula instala dependentele, trebuie sa rulati comanda `npm install` in directorul proiectului.
 
-5. Pentru a rula proiectul, trebuie sa rulati comanda `npm start` in directorul proiectului.
+5. Pentru a rula proiectul, trebuie sa rulati comanda `node app.js` in directorul proiectului.
